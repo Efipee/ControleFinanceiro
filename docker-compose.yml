@@ -1,29 +1,29 @@
 version: "3.9"
 
 networks:
-  pricing-demo-network:
+  controle-financeiro-network:
 
 services:
-  pricing-demo-app:
-    container_name: pricing-demo-app
+  controle-financeiro-app:
+    container_name: controle-financeiro-app
     build:
       context: .
       dockerfile: Dockerfile
     depends_on:
-      - pricingDemoDB
+      - controleFinanceiroDB
     env_file:
       - .env
     environment:
       ENV: docker
       JDBC_DATABASE_URL: ${DATABASE_URL}
     networks:
-      - pricing-demo-network
+      - controle-financeiro-network
     ports:
       - "6000:6000"
       - "5600:5600"
-    command: "java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5600 -jar pricing-demo.jar"
-  pricingDemoDB:
-    container_name: pricing-demo-db
+    command: "java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5600 -jar controleFinanceiro.jar"
+  controleFinanceiroDB:
+    container_name: controle-financeiro-db
     image: postgres:14.2-alpine
     env_file:
       - .env
@@ -32,10 +32,10 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_MULTIPLE_DATABASES: ${POSTGRES_MULTIPLE_DATABASES}
     networks:
-      - pricing-demo-network
+      - controle-financeiro-network
     ports:
       - "5432:5432"
     volumes:
       - ./postgres/postgres-multiple-databases.sh:/docker-entrypoint-initdb.d/postgres-multiple-databases.sh
 volumes:
-  pricingDemoDB:
+  controleFinanceiroDB:

@@ -1,0 +1,48 @@
+spring:
+  # Profile Configuration
+  profiles:
+    active: ${PROFILE}
+  application:
+    name: controle-financeiro-app
+  # DataSource Configuration
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/controle_financeiro_test
+    username: postgres
+    password: BnBBwv8Zh86qdzMc
+    sql-script-encoding: UTF-8
+  # JACKSON properties
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  # JPA properties
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob:
+          non_contextual_creation: true
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    properties:
+      enable_lazy_load_no_trans: true
+  # Logger configuration
+  logging:
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+    level:
+      org.springframework: info
+      org.hibernate: debug
+  security:
+    user:
+      name: eder
+      password: test
+
+# Server Configuration
+server:
+  port: 4000 #set your port
+  servlet:
+    context-path: "/controleFinanceiro"
