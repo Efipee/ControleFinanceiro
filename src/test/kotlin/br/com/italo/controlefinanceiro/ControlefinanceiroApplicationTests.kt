@@ -9,5 +9,4 @@ class ControlefinanceiroApplicationTests {
 	@Test
 	fun contextLoads() {
 	}
-
 }
