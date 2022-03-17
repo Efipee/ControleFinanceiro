@@ -38,6 +38,6 @@ spring:
       org.hibernate: debug
 # Server Configuration
 server:
-  port: ${SERVER_PORT} #set your port
+  port: 6000
   servlet:
     context-path: "/controleFinanceiro"
