@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 class HelloWorldRepository {
 
     fun getHelloWorld(): HelloWorld {
-        return HelloWorld("Olá mundo!!!");
+        return HelloWorld("Olá mundo!!!")
     }
 }

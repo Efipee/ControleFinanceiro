@@ -16,8 +16,8 @@ services:
     environment:
       ENV: docker
       JDBC_DATABASE_URL: ${DATABASE_URL}
-    networks:
-      - controle-financeiro-network
+    # networks:
+     # - controle-financeiro-network
     ports:
       - "6000:6000"
       - "5600:5600"
@@ -28,11 +28,12 @@ services:
     env_file:
       - .env
     environment:
+      POSTGRES_DB: ${DATABASE}
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_MULTIPLE_DATABASES: ${POSTGRES_MULTIPLE_DATABASES}
-    networks:
-      - controle-financeiro-network
+    #networks:
+    #  - controle-financeiro-network
     ports:
       - "5432:5432"
     volumes:

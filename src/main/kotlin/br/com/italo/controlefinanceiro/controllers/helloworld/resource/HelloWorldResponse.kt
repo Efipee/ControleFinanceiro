@@ -9,5 +9,4 @@ class HelloWorldResponse(val message: String) {
             return HelloWorldResponse(helloWorld.message)
         }
     }
-
 }
