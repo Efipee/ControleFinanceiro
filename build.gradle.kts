@@ -1,3 +1,4 @@
+import java.util.regex.Pattern.compile
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val detektVersion: String by project
@@ -22,6 +23,7 @@ repositories {
 
 dependencies {
 
+    implementation("io.swagger:swaggerhub-maven-plugin:1.0.9")
     // DETEKT DEPENDENCIES
     detekt("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
     detekt("io.gitlab.arturbosch.detekt:detekt-cli:$detektVersion")
@@ -34,6 +36,7 @@ dependencies {
     implementation("org.postgresql:postgresql:42.3.3")
     implementation("org.hibernate:hibernate-entitymanager:5.4.4.Final")
     implementation("org.hibernate:hibernate-core:6.0.0.CR2")
+    implementation("io.springfox:springfox-data-rest:3.0.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 }

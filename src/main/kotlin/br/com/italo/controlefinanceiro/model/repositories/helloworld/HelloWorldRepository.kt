@@ -1,6 +1,6 @@
 package br.com.italo.controlefinanceiro.model.repositories.helloworld
 
-import br.com.italo.controlefinanceiro.model.entities.helloworld.HelloWorld
+import br.com.italo.controlefinanceiro.model.entities.pessoa.HelloWorld
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -10,3 +10,5 @@ class HelloWorldRepository {
         return HelloWorld("Olá mundo!!!")
     }
 }
+
+main
