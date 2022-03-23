@@ -1,11 +1,11 @@
-package br.com.italo.controlefinanceiro
+package br.com.italo.financialcontrol
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ControlefinanceiroApplication
+class FinancialcontrolApplication
 
 fun main(args: Array<String>) {
-	runApplication<ControlefinanceiroApplication>(*args)
+	runApplication<FinancialcontrolApplication>(*args)
 }
