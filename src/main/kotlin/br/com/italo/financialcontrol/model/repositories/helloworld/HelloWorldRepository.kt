@@ -1,6 +1,5 @@
-package br.com.italo.controlefinanceiro.model.repositories.helloworld
+package br.com.italo.financialcontrol.model.entities.helloworld
 
-import br.com.italo.controlefinanceiro.model.entities.helloworld.HelloWorld
 import org.springframework.stereotype.Repository
 
 @Repository

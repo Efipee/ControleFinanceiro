@@ -1,6 +1,6 @@
-package br.com.italo.controlefinanceiro.controllers.helloworld.resource
+package br.com.italo.financialcontrol.controllers.helloworld.resource
 
-import br.com.italo.controlefinanceiro.model.entities.helloworld.HelloWorld
+import br.com.italo.financialcontrol.model.entities.helloworld.HelloWorld
 
 class HelloWorldResponse(val message: String) {
 
