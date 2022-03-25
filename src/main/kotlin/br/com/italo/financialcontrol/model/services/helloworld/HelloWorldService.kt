@@ -1,4 +1,4 @@
-package br.com.italo.financialcontrol.model.repositories.services.helloworld
+package br.com.italo.financialcontrol.model.services.helloworld
 
 import br.com.italo.financialcontrol.model.entities.helloworld.HelloWorld
 import br.com.italo.financialcontrol.model.entities.helloworld.HelloWorldRepository
