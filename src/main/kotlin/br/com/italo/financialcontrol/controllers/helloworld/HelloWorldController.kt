@@ -1,7 +1,7 @@
 package br.com.italo.financialcontrol.controllers.helloworld
 
 import br.com.italo.financialcontrol.controllers.helloworld.resource.HelloWorldResponse
-import br.com.italo.financialcontrol.model.repositories.services.helloworld.HelloWorldService
+import br.com.italo.financialcontrol.model.services.helloworld.HelloWorldService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
