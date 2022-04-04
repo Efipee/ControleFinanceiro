@@ -93,7 +93,7 @@ complexity:
         active: true
         excludes: [ '**/test/**' ]
         functionThreshold: 6
-        constructorThreshold: 7
+        constructorThreshold: 8
         ignoreDefaultParameters: false
         ignoreDataClasses: true
     #        ignoreAnnotatedParameter: [ ]
