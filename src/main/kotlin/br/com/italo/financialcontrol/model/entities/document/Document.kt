@@ -16,9 +16,9 @@ import org.hibernate.annotations.UpdateTimestamp
 @Entity
 @Table(name = "documents")
 class Document(
-    @Column
+    @Column(name = "NUMBER_DOCUMENT")
     val number: String,
-    @Column
+    @Column(name = "DOCUMENT_TYPE")
     val type: DocumentType,
     @ManyToOne
     @JoinColumn(name = "owner_id")
